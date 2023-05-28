@@ -6,7 +6,8 @@ public class Student {
     private String name;
     private String city;
 
-
+    public Student() {
+    }
 
     public Student(int id, String name, String city) {
         this.id = id;
