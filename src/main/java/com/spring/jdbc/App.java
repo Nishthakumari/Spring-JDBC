@@ -13,15 +13,29 @@ public class App {
 
         StudentDao studentDao = context.getBean("studentDao", StudentDao.class );
 
-        Student student  = new Student();
-        student.setId(666);
-        student.setName("Mugdha");
-        student.setCity("hyderabad");
+//        Student student  = new Student();
+//        student.setId(666);
+//        student.setName("Mugdha");
+//        student.setCity("hyderabad");
+//
+//        int result = studentDao.insert(student);
+//
+//        System.out.println("Student Added "+ result);
 
-        int result = studentDao.insert(student);
+//        Student student = new Student();
+//        student.setId(1345);
+//        student.setName("rimmi");
+//        student.setName("delhi");
+//
+//        int result = studentDao.change(student);
+//
+//        System.out.println("Student changed "+ result);
+//
+//        int result = studentDao.delete(5345);
+//        System.out.println("deleted "+result);
 
-        System.out.println("Student Added "+ result);
-
+        Student student = studentDao.getStudent(1345);
+        System.out.println(student);
 
 
 
