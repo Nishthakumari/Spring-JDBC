@@ -1,13 +1,17 @@
 package com.spring.jdbc.dao;
 
 import com.spring.jdbc.Student;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component("studentDao")
 public class StudentDaoImpl implements StudentDao{
 
+    @Autowired
     JdbcTemplate jdbcTemplate;
 
     public StudentDaoImpl(){
