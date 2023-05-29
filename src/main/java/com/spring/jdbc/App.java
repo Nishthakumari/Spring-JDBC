@@ -4,6 +4,8 @@ import com.spring.jdbc.dao.StudentDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.List;
+
 public class App {
 
     public static void main(String[] args) {
@@ -38,7 +40,11 @@ public class App {
         System.out.println(student);
 
 
-
+        List<Student> students  = studentDao.getAllStudents();
+        for(Student s: students)
+        {
+            System.out.println(s);
+        }
 
 
     }
